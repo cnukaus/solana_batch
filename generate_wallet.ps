@@ -1,0 +1,27 @@
+PS C:\Users\play> for ($test=0; $test -lt 26; $test++)
+>> { &'' [char](65+$test)}
+
+https://stackoverflow.com/questions/2137092/powershell-sending-multiple-parameter-to-a-external-command
+
+ for ($test=3; $test -lt 5; $test++)
+{ $num=[char](65+$test)
+$param = "new --no-bip39-passphrase -o keys\$num.json"
+& "$cmd" $param}
+#CAN"T have pipe in param
+ for ($test=3; $test -lt 5; $test++)
+ { $num=[char](65+$test)
+
+ & "$cmd" "new","--no-bip39-passphrase", "-o","keys\$num.json"}
+| Out-File pubkeys.txt -Append
+
+
+Start-Transcript -path C:\output.txt -append
+# Do some stuff
+Stop-Transcript
+
+
+$Command = "E:\X64\Xendesktop Setup\XenDesktopServerSetup.exe"
+$Parms = "/COMPONENTS CONTROLLER,DESKTOPSTUDIO,DESKTOPDIRECTOR,LICENSESERVER,STOREFRONT /PASSIVE /NOREBOOT /CONFIGURE_FIREWALL /NOSQL"
+
+$Prms = $Parms.Split(" ")
+& "$Command" $Prms
