@@ -3,7 +3,11 @@ This is an experimental project and intended for used by my friends, make it ope
 ### to do
 - [ ]  如何用spl-token或其他命令行或Rust(JS API)来 call program,达到([Stake 20 Ray](https://explorer.solana.com/tx/z65fvxuuYKPGSbLA2okXcjxfeV3Um1bHAPmV1PRxHQfUo2CxyZu8hE8of3gDDyX25wKxg6taDSvoEnrFtFPPniT))效果
 
-- [ ]  generated pubkey is not the default key imported to Sollet (sequence of Hierarchical deterministic is different?)
+[autofarm by phips28](https://raydium-auto-farm.vercel.app/autofarm/)
+
+待攻关问题 基本原型已经在这里- [https://github.com/phips28/raydium-ui](https://github.com/phips28/raydium-ui)
+
+- [ ]  [Python code to call Ray api](https://github.com/raydium-io/raydium-api/blob/master/app/app.py)
 
 ### 资源：
 

@@ -1,27 +1,19 @@
-PS C:\Users\play> for ($test=0; $test -lt 26; $test++)
->> { &'' [char](65+$test)}
+<# 
+requirement:
+download and install Solana cli from https://docs.solana.com/cli/install-solana-cli-tools
 
-https://stackoverflow.com/questions/2137092/powershell-sending-multiple-parameter-to-a-external-command
+ #>
 
- for ($test=3; $test -lt 5; $test++)
-{ $num=[char](65+$test)
-$param = "new --no-bip39-passphrase -o keys\$num.json"
-& "$cmd" $param}
-#CAN"T have pipe in param
- for ($test=3; $test -lt 5; $test++)
- { $num=[char](65+$test)
+# set seq between 1 and 26, use $to_letter to generate wallet file name from a-z
+$cmd='solana-keygen'
 
- & "$cmd" "new","--no-bip39-passphrase", "-o","keys\$num.json"}
-| Out-File pubkeys.txt -Append
+$to_letter=[char](65+$seq)
 
 
-Start-Transcript -path C:\output.txt -append
-# Do some stuff
-Stop-Transcript
+#CAN'T have pipe in param
+$cmd='solana-keygen'
+ for ($seq=1; $seq -lt 5; $seq++)
+{ 
+ & "$cmd" "new","--no-bip39-passphrase", "-o","keys\key_$sum.json"| Out-File pubkeys.txt -Append
 
-
-$Command = "E:\X64\Xendesktop Setup\XenDesktopServerSetup.exe"
-$Parms = "/COMPONENTS CONTROLLER,DESKTOPSTUDIO,DESKTOPDIRECTOR,LICENSESERVER,STOREFRONT /PASSIVE /NOREBOOT /CONFIGURE_FIREWALL /NOSQL"
-
-$Prms = $Parms.Split(" ")
-& "$Command" $Prms
+}
