@@ -1,5 +1,13 @@
 This is an experimental project and intended for usage by my friends, I make it open source anyway if that helps. I have been helped by so many people in the blockchain world.
 
+### Function implemented
+
+sol_transfer.py - move SOL or SPL-20 tokens to new accounts, takes 2 arguments: from wallet address, private key json file
+
+
+generate_wallet.ps - powershell to create multiple wallet/keypair files
+
+
 ### to do
 - [ ]  如何用spl-token或其他命令行或Rust(JS API)来 call program,达到([Stake 20 Ray](https://explorer.solana.com/tx/z65fvxuuYKPGSbLA2okXcjxfeV3Um1bHAPmV1PRxHQfUo2CxyZu8hE8of3gDDyX25wKxg6taDSvoEnrFtFPPniT))效果
 
