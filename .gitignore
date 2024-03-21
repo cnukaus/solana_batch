@@ -14,7 +14,22 @@
 *.zip
 *.ZIP
 .ipynb_checkpoints
+*~
+*.pyc
+*.pyo
+__pycache__
+.vs
+.coverage
+.mypy_cache
+htmlcov
+*.egg-info
+.idea
+build
+dist
+venv
 
+
+node_modules
 customer_audience/csv_audience
 
 # Node artifact files
