@@ -2,7 +2,7 @@
 const web3 = require('@solana/web3.js');
 const bs58 = require('bs58');
 const dotenv = require('dotenv');
-const myRpcUrl = "https://solana-mainnet.g.alchemy.com/v2/4utcyLqxr-K7Zm73hAJvBuS_pRVgU5DC";
+const myRpcUrl = "";
 const mnemonic = process.env.MNE_SOLANA
 
 // Load environment variables from .env file
